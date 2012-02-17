@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'prawn'
 require 'prawn/layout'
 require 'prawn/fast_png'
@@ -38,7 +39,7 @@ module Riopro
         attr_accessor :instructions
 
         def initialize(options={})
-          actual_date = options[:current_date] || Date.current
+          actual_date = options[:current_date] || Date.today
           self.currency_symbol =  "R$"
           self.currency =  "9"
           self.processed_at =  actual_date

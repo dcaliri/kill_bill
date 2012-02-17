@@ -1,3 +1,4 @@
+# encoding: utf-8
 #
 # Include new method to ruby base classes
 #

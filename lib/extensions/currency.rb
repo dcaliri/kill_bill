@@ -28,12 +28,12 @@ module Riopro
         module Number
           def to_currency(options = {})
             number = self
-            default   = Currency::DEFAULT.stringify_keys
-            options   = default.merge(options.stringify_keys)
+            default   = Currency::DEFAULT
+            options   = default.merge(options)
             precision = options["precision"] || default["precision"]
             unit      = options["unit"] || default["unit"]
             position  = options["position"] || default["position"]
-            separator = precision > 0 ? options["separator"] || default["separator"] : ""
+            separator = options["separator"] || default["separator"]
             delimiter = options["delimiter"] || default["delimiter"]
 
             begin
